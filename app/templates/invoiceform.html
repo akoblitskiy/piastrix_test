@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form name="payform" method="get" action="{{ url }}" accept-charset="UTF-8">
+{% for key in data %}
+    <input type="hidden" name="{{ key }}" value="{{ data[key] }}"/>
+{% endfor %}
+<input type="submit" name="description" value="Test invoice"/>
+</form>
+<p>Sending invoice data...</p>
+<script type="text/javascript">document.payform.submit();</script>
+{% endblock %}

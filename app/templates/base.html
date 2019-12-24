@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>{% if title %} {{ title }} {% else %} Home {% endif %} - Pay Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div id="content">
+        <h2> {% if title %} {{ title }} {% else %} Home {% endif %} </h2>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

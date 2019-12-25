@@ -27,8 +27,8 @@ class Database:
     def get_order_id(self):
         self._cursor.execute('SELECT MAX(id) FROM payment')
         for row in self._cursor:
-            return row[0]
-        return 0
+            return int(row[0]) + 1
+        return 1
 
     def write_payment(self, order_id, currency, amount, description, message):
         self._cursor.execute('INSERT INTO payment(id, currency, amount, created_at, description, message) ' +

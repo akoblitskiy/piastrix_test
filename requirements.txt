@@ -9,7 +9,7 @@ Jinja2==2.10.3
 MarkupSafe==1.1.1
 pipenv==2018.11.26
 psycopg2-binary==2.8.4
-urllib3==1.25.7
+urllib3==1.26.5
 virtualenv==16.7.9
 virtualenv-clone==0.5.3
 Werkzeug==0.16.0
